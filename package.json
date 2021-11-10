@@ -1,5 +1,5 @@
 {
-  "name": "Sparked-Paste",
+  "name": "Catalyst-Paste",
   "version": "1.0.0",
   "private": true,
   "description": "Fork of haste-server",
@@ -8,9 +8,9 @@
     "pastebin"
   ],
   "author": {
-    "name": "Raúl Molina",
-    "email": "raul.m@sparkedhost.com",
-    "url": "https://bettd.me/"
+    "name": "CJ Stevenson",
+    "email": "admin@cjstevenson.com",
+    "url": "https://cjstevenson.com/"
   },
   "main": "haste",
   "dependencies": {
