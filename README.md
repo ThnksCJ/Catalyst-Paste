@@ -1,4 +1,4 @@
-# Sparked Paste
+# Catalyst Paste
 
 Sparked Paste is a fork of the open-source project haste-server, modified to
 match the Sparked Host brand and with a couple different patches and improvements.
@@ -354,6 +354,7 @@ Here is a list of all the environment variables
 
 John Crepezzi <john.crepezzi@gmail.com>
 Raúl Molina <raul.m@sparkedhost.com>
+Forked by CJ Stevenson <admin@cjstevenson.com>
 
 ### Other components:
 
