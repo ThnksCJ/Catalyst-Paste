@@ -1,0 +1,74 @@
+<html>
+
+	<head>
+
+		<title>Welcome to Catalyst Paste</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="solarized_dark.css"/>
+		<link rel="stylesheet" type="text/css" href="application.css"/>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Rubik|Ubuntu+Mono&display=swap"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css">
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="highlight.min.js"></script>
+		<script type="text/javascript" src="application.js"></script>
+
+		<meta name="robots" content="noindex,nofollow"/>
+
+		<script type="text/javascript">
+			let app = null;
+			// Handle pops
+			let handlePop = function (evt) {
+				const path = evt.target.location.pathname;
+				if (path === '/') {
+					app.newDocument(true);
+				} else {
+					app.loadDocument(path.substring(1, path.length));
+				}
+			};
+			// Set up the pop state to handle loads, skipping the first load
+			// to make chrome behave like others:
+			// http://code.google.com/p/chromium/issues/detail?id=63040
+			setTimeout(function() {
+				window.onpopstate = function(evt) {
+					try { handlePop(evt); } catch(err) { /* not loaded yet */ }
+				};
+			}, 1000);
+			// Construct app and load initial path
+			$(function() {
+				app = new haste('Catalyst Paste', { twitter: true });
+				handlePop({ target: window });
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<ul id="messages"></ul>
+
+		<div class="box">
+		  <div id="pointer" style="display:none;"></div>
+			<div id="box1">
+				<a href="/about.md" class="logo"></a>
+			</div>
+			<div id="box2">
+				<a class="function save button-picture"><i class="fas fa-save"></i></a>
+				<a class="function new button-picture"><i class="far fa-file"></i></a>
+				<a class="function duplicate button-picture"><i class="far fa-copy"></i></a>
+				<a class="function raw button-picture"><i class="fas fa-code"></i></a>
+				<a class="function copyurl button-picture"><i class="fas fa-link"></i></a>
+			</div>
+			<div id="box3" style="display:none;">
+				<div class="label"></div>
+				<div class="shortcut"></div>
+			</div>
+		</div>
+
+		<div id="lineNumbers"></div>
+		<pre id="box" style="display:none;" class="hljs" tabindex="0"><code></code></pre>
+		<textarea spellcheck="false" style="display:none;"></textarea>
+
+	</body>
+
+</html>
