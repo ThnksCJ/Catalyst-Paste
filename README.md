@@ -1,7 +1,7 @@
 # Catalyst Paste
 
-Sparked Paste is a fork of the open-source project haste-server, modified to
-match the Sparked Host brand and with a couple different patches and improvements.
+Catalyst Paste is a fork of the open-source project haste-server, modified to
+match the INZO Technologies brand and with a couple different patches and improvements.
 
 Major design objectives:
 
@@ -9,7 +9,7 @@ Major design objectives:
 * Be really simple
 * Be easy to set up and use
 
-Haste works really well with a little utility called
+Catalyst Paste works really well with a little utility called
 [haste-client](https://github.com/seejohnrun/haste-client), allowing you
 to do things like:
 
@@ -20,12 +20,10 @@ STDOUT.  Check the README there for more details and usages.
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/SparkedHost/Sparked-Paste`
-2. Copy the config.example.json file to config.json: `cp config.sample.json config.json`
-3. Explore the settings inside of config.json, but the defaults should be good.
-4. Run `npm install` to install all the required npm packages.
-5. Create the `hastes` directory: `mkdir hastes`
-6. `npm start` (you may specify an optional `<config-path>` as well)
+1. Clone the repository: `git clone https://github.com/ThnksCJ/Catalyst-Paste`
+2. Explore the settings inside of config.json, but the defaults should be good.
+3. Run `npm install` to install all the required npm packages.
+4. `npm start` (you may specify an optional `<config-path>` as well)
 
 Read the wiki for a more in-depth installation guide.
 
@@ -37,7 +35,7 @@ Read the wiki for a more in-depth installation guide.
 * `maxLength` - maximum length of a paste (default 400000)
 * `staticMaxAge` - max age for static assets (86400)
 * `recompressStaticAssets` - whether or not to compile static js assets (true)
-* `documents` - static documents to serve (ex: http://hastebin.com/about.com)
+* `documents` - static documents to serve (ex: https://catalyst-paste.cjstevenson.com/about.md)
   in addition to static assets.  These will never expire.
 * `storage` - storage options (see below)
 * `logging` - logging preferences
@@ -94,8 +92,6 @@ something like:
 ```
 
 where `path` represents where you want the files stored.
-
-File storage currently does not support paste expiration, you can follow [#191](https://github.com/seejohnrun/haste-server/issues/191) for status updates.
 
 ### Redis
 
@@ -270,30 +266,6 @@ your bucket:
 }
 ```
 
-## Docker
-
-### Build image
-
-```bash
-docker build --tag haste-server .
-```
-
-### Run container
-
-For this example we will run haste-server, and connect it to a redis server
-
-```bash
-docker run --name haste-server-container --env STORAGE_TYPE=redis --env STORAGE_HOST=redis-server --env STORAGE_PORT=6379 haste-server
-```
-
-### Use docker-compose example
-
-There is an example `docker-compose.yml` which runs haste-server together with memcached
-
-```bash
-docker-compose up
-```
-
 ### Configuration
 
 The docker image is configured using environmental variables as you can see in the example above.
@@ -352,9 +324,9 @@ Here is a list of all the environment variables
 
 ## Author
 
-John Crepezzi <john.crepezzi@gmail.com>
-Raúl Molina <raul.m@sparkedhost.com>
-Forked by CJ Stevenson <admin@cjstevenson.com>
+* John Crepezzi <john.crepezzi@gmail.com>
+* Raúl Molina <raul.m@sparkedhost.com>
+* Forked by CJ Stevenson <admin@cjstevenson.com>
 
 ### Other components:
 

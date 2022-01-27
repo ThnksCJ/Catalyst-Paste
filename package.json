@@ -1,28 +1,28 @@
 {
-  "name": "Catalyst-Paste",
-  "version": "1.0.0",
+  "name": "CATALYST-PASTE",
+  "version": "1.7.3",
   "private": true,
-  "description": "Fork of haste-server",
+  "description": "Private Pastebin Server",
   "keywords": [
     "paste",
     "pastebin"
   ],
   "author": {
-    "name": "CJ Stevenson",
+    "name": "Thnks_CJ",
     "email": "admin@cjstevenson.com",
     "url": "https://cjstevenson.com/"
   },
-  "main": "haste",
+  "main": "CATALYST-PASTE",
   "dependencies": {
-    "busboy": "0.3.1",
+    "busboy": "0.2.4",
     "connect": "^3.7.0",
     "connect-ratelimit": "0.0.7",
     "connect-route": "0.1.5",
     "pg": "^8.0.0",
     "redis": "0.8.1",
-    "redis-url": "0.3.1",
+    "redis-url": "0.1.0",
     "st": "^2.0.0",
-    "uglify-js": "3.14.4",
+    "uglify-js": "3.1.6",
     "winston": "^2.0.0"
   },
   "devDependencies": {
@@ -30,7 +30,7 @@
   },
   "bundledDependencies": [],
   "bin": {
-    "haste-server": "./server.js"
+    "CATALYST-PASTE-server": "./server.js"
   },
   "files": [
     "server.js",

@@ -1,9 +1,7 @@
 # Catalyst Paste
 
-Welcome to our Catalyst Paste service. We may ask you to visit this site in order to
-paste logs, or may have been sent a link to catalyst-paste by one of our staff
-members. The main purpose of this tool is to share code snippets, configs, server logs,
-errors...
+Welcome to our Catalyst Paste service. The main purpose of this tool is to share code snippets, configs, server logs,
+errors... Please do not overuse this tool or its api.
 
 ## Duration
 
@@ -22,6 +20,7 @@ pastes.
 This service is powered by Catalyst-Paste, a fork of the open-source project haste-server.
 
 * [haste-client](https://github.com/seejohnrun/haste-client)
+* [Catalyst-Paste](https://github.com/ThnksCJ/Catalyst-Paste)
 
 ## Author
 

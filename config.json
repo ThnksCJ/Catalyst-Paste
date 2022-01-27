@@ -1,43 +1,32 @@
 {
-
-  "host": "0.0.0.0",
-  "port": 7777,
-
-  "keyLength": 10,
-
-  "maxLength": 400000,
-
-  "staticMaxAge": 9999999999,
-
-  "recompressStaticAssets": true,
-
-  "logging": [
-    {
-      "level": "verbose",
-      "type": "Console",
-      "colorize": true
+    "documents": {
+        "about": "./about.md"
+    },
+    "host": "0.0.0.0",
+    "keyGenerator": {
+        "type": "phonetic"
+    },
+    "keyLength": 10,
+    "logging": [
+        {
+            "colorize": true,
+            "level": "verbose",
+            "type": "Console"
+        }
+    ],
+    "maxLength": 400000,
+    "port": 25502,
+    "rateLimits": {
+        "categories": {
+            "normal": {
+                "every": 60000,
+                "totalRequests": 500
+            }
+        }
+    },
+    "recompressStaticAssets": true,
+    "staticMaxAge": 9999999999,
+    "storage": {
+        "type": "file"
     }
-  ],
-
-  "keyGenerator": {
-    "type": "phonetic"
-  },
-
-  "rateLimits": {
-    "categories": {
-      "normal": {
-        "totalRequests": 500,
-        "every": 60000
-      }
-    }
-  },
-
-  "storage": {
-    "type": "file"
-  },
-
-  "documents": {
-    "about": "./about.md"
-  }
-
 }
