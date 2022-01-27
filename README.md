@@ -86,7 +86,7 @@ something like:
 
 ``` json
 {
-  "path": "./hastes",
+  "path": "./data",
   "type": "file"
 }
 ```
