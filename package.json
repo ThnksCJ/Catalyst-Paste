@@ -20,7 +20,7 @@
     "connect-route": "0.1.5",
     "pg": "^8.0.0",
     "redis": "0.8.1",
-    "redis-url": "0.1.0",
+    "redis-url": "0.3.1",
     "st": "^2.0.0",
     "uglify-js": "3.1.6",
     "winston": "^2.0.0"
